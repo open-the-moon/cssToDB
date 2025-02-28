@@ -1,5 +1,5 @@
 
-    package com.multi.travel.view;
+ package com.multi.travel.view;
 
 import com.multi.travel.controller.TravelController;
 
@@ -31,7 +31,11 @@ import java.util.Scanner;
                         case 1:
 
                             break;
-                        case 2:
+                            //ps
+                        case 2:  sc.nextLine(); // 이전 입력 버퍼 비우기
+                            System.out.print("조회할 권역을 입력하세요: ");
+                            String district = sc.nextLine(); // 사용자가 권역 입력
+                            travelController.showTravelsByDistrict(district); // 컨트롤러 호출
 
                             break;
                         case 3:
